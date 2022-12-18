@@ -25,13 +25,17 @@ namespace Service.Service
 				if (user1.Email.Contains("@"))
 				{
 					Console.WriteLine("Register Succesed");
-				}	
+				}
+				else
+				{
+					throw new RegisterException(UserCredentialMessage.UserEmailWrong);
+				}
 				
 				
 			}
-			catch (Exception ex)
+			catch (RegisterException message)
 			{
-				Console.WriteLine(UserCredentialException.UserEmailWrong);
+				Console.WriteLine(message.Message);
 				
 			}
         }
