@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Service.Service.Interface
 {
-    internal class IAccount
+    public interface IAccount
     {
+        void Register(string username, string email, string password);
     }
 }

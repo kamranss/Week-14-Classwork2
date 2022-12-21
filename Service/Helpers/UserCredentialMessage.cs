@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Service.Helpers
 {
-    internal class UserCredentialException
+    public class UserCredentialMessage
     {
+        public  const string  UserEmailWrong = "Email doesnot have respective symbols such as -@-";
     }
 }

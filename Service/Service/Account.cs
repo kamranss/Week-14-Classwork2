@@ -16,18 +16,11 @@ namespace Service.Service
         {
 			try
 			{
-				User user1 = new()
-				{
-					Username = username,
-					Email = email,
-					Password = password
-				};
-
-                //user1.Email.Contains("@")
+               //user1.Email.Contains("@")
 
                 Regex emailRegex = new Regex(@"^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,4}\b");
 
-                if (emailRegex.IsMatch(user1.Email))
+                if (emailRegex.IsMatch(email))
 				{
 					Console.WriteLine("Register Succesed");
 				}
@@ -43,6 +36,13 @@ namespace Service.Service
 				Console.WriteLine(message.Message);
 				
 			}
+
+            User user1 = new()
+            {
+                Username = username,
+                Email = email,
+                Password = password
+            };
         }
     }
 }
